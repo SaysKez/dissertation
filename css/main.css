@@ -86,8 +86,8 @@ body {
 
 section {
     margin: auto;
-    width: 60%;
-    max-width: 900px;
+    width: 68%;
+    max-width: 850px;
 }
 
 /* TYPOGRAPHY */
@@ -412,13 +412,59 @@ ol li:hover {
 
 /* RESPONSIVE */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media (max-width: 55em) {
+
+    section {
+        width: 100%;
+    }
+
+    section p, section ol {
+        width: 80%;
+    }
+    
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+
+@media (max-width: 40em) {
+
+    header {
+        background-position: 40% 0%;
+    }
+
+    section p {
+        width: 85%;
+    }
+
+    .section-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .small-img {
+        width: 60%;
+        height: auto;
+    }
+
+    blockquote {
+        width: 100%;
+    }
+
+    h1, h2, h3, h4 {
+        width: 100%;
+    }
+
+    #bibliography ol {
+        columns: 1;
+    }
+
+    iframe {
+        width: 100%;
+        padding: 0em;
+        margin: auto;
+        padding: 1.53em 0em;
+        border: none;
+        border-top: 4px solid #85FF64;
+        border-bottom: 4px solid #85FF64;
+    }
+    
 }
