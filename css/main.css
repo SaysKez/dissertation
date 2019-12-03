@@ -298,9 +298,12 @@ footer img {
 footer p, footer a {
     text-align: center;
     margin: 1em auto;
-    padding: 0.2em 2.441em 0.2em 2.441em;
     color: #FF04D1;
     font-size: 90%;
+}
+
+footer a {
+    padding: 0.2em 2.441em 0.2em 2.441em;
 }
 
 footer a:hover {
@@ -446,6 +449,14 @@ ol li:hover {
         width: 85%;
     }
 
+    h1 {
+        font-size: 2.441em;
+    }
+
+    h2 {
+        font-size: 1.953em;
+    }
+
     .section-img {
         width: 100%;
         height: auto;
@@ -475,6 +486,10 @@ ol li:hover {
         border: none;
         border-top: 4px solid #85FF64;
         border-bottom: 4px solid #85FF64;
+    }
+
+    #experience {
+        width: 120%;
     }
     
 }
