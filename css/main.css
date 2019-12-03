@@ -1,0 +1,424 @@
+/* Table of Contents
+
+-- GENERAL --
+0. Simple Reset
+1. General styling
+
+-- Responsive --
+M1. Media query syntax
+
+
+Pink: #FF04D1
+Dark blue: #1800CA
+Blue: #3EACFF
+Green: #85FF64
+*/
+
+
+
+/* 0. SIMPLE RESET */
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+ ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/* 1. GENERAL STYLING */
+body {
+    color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Bitter', serif;
+}
+
+section {
+    margin: auto;
+    width: 60%;
+    max-width: 900px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.953em;
+    color: #1800CA;
+}
+
+h1 {
+    font-size: 3.052em;
+}
+
+h2 {
+    font-size: 2.441em
+}
+
+h3 {
+    font-size: 1.563em;
+    margin: 3.815em auto auto auto;
+}
+
+p, ol {
+    font-weight: 400;
+    line-height: 1.953em;
+    margin: 1.563em auto;
+}
+
+sup {
+    font-size: 50%;
+    color: #FF04D1;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.953em;
+}
+a {
+    text-decoration: none;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: black;
+    line-height: 1.953em;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+    margin: 1.53em auto 4.768em auto;
+    text-align: center;
+    width: 80%;
+    border-top: 2px solid #FF04D1;
+    border-bottom: 2px solid #FF04D1;
+}
+
+blockquote.in-text {
+    margin: 4.768em auto;
+}
+
+blockquote p:first-child {
+    font-weight: 700;
+    font-size: 115%;
+    margin-bottom: 1em;
+}
+
+blockquote p:nth-child(2) {
+    margin-top: -0.5em;
+    color: #1800CA;
+}
+
+
+/* HEADER */
+header {
+    background-image: url("../img/samurai.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 9.52em;
+}
+
+
+header .wrapper {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header h3 {
+    margin: auto;
+    font-weight: 400;
+    color: #FF04D1;
+}
+
+header p {
+    text-align: center;
+}
+
+header .container {
+    border-bottom: 2px solid #85FF64;
+    border-top: 2px solid #85FF64;
+    background-color: rgba(255,255,255,0.8); 
+}
+
+
+
+/* IMG */
+img {
+    width: 60%;
+    max-width: 900px;
+    display: block;
+    margin: auto;
+}
+
+.section-img {
+    margin: 12.052em auto 3.052em auto;
+}
+
+.small-img {
+    width: 50%;
+    margin: 9.052em auto -2.441em auto;
+}
+
+
+/* VIDEOS */
+iframe {
+    display: block;
+    margin: 4.768em auto;
+    min-width: 560px;
+    min-height: 315px;
+    width: 50%;
+    border: 4px solid #85FF64;
+    /* border-image: ("../img/pattern.png") 30; */
+    padding: 1.53em;
+}
+
+/*
+.border {
+    position: relative;
+}
+
+.border:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #85FF64;
+    border-radius: 10px;
+    transform: rotate( 51deg);
+    pointer-events: none;
+}
+*/
+
+
+/* BIBLIOGRAPHY */
+#bibliography ol {
+    columns: 2;
+    column-gap: 4.768em;
+    font-size: 70%;
+    list-style: none;
+    counter-reset: item;
+}
+
+ol li {
+    margin-bottom: 1.53em;
+    counter-increment: item;
+    margin-bottom: 5px;
+  }
+
+ol li:before {
+    margin-right: 0.4em;
+    margin-left: -1.6em;
+    content: counter(item);
+    border-radius: 100%;
+    color: #FF04D1;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+  }
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    margin: 4.768em auto;
+}
+
+footer img {
+      max-width: 200px;
+      width: 16em;
+      margin: 1.25em auto;
+  }
+
+footer p, footer a {
+    text-align: center;
+    margin: 1em auto;
+    padding: 0.2em 2.441em 0.2em 2.441em;
+    color: #FF04D1;
+    font-size: 90%;
+}
+
+footer a:hover {
+    background-color: #85FF64;
+}
+
+
+/* MENU */
+/* Menu adapted from here: https://codepen.io/slyka85/pen/LbXYKQ */
+
+body {
+    position: relative;
+}
+
+#menu-container {
+    position: sticky;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+}
+
+#menu-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+#menu-wrapper #hamburger-menu {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin: 15px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#menu-wrapper #hamburger-menu span {
+    opacity: 1;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    color: #FF04D1;
+    background-color: #FF04D1;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: .4s ease-in-out;
+}
+
+#menu-wrapper #hamburger-menu span:nth-child(1) {
+    top: 0;
+}
+#menu-wrapper #hamburger-menu span:nth-child(2) {
+    top: 9px;
+}
+#menu-wrapper #hamburger-menu span:nth-child(3) {
+    top: 18px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(1) {
+    transform: translateY(9px) rotate(135deg);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-135deg);
+}
+
+
+
+#menu-container .menu-list {
+    padding-left: 0;
+    padding-right: 2.441em;
+    display: block;
+    position: absolute;
+    width: auto;
+    max-width: 450px;
+    background: white;
+    box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    left: -100%;
+    border-top: 4px solid #FF04D1;
+    border-bottom: 4px solid #FF04D1;
+}
+
+ol.menu-list {
+    list-style: none;
+    counter-reset: item;
+    margin-top: 0em;
+}
+
+.menu-list li {
+    padding: 0.8em 0.512em 0.8em 3.052em;
+    /* margin: 1.563em auto 1.563em 3.052em; */
+}
+
+.menu-list li:first-of-type {
+    margin-top: 5px;
+}
+
+ol li:hover {
+    background-color: #85FF64;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
