@@ -201,6 +201,25 @@ header .container {
 }
 
 
+/* SELECT */
+select{
+    width: auto;
+    font-family: 'Bitter', serif;
+    line-height: 1.953em;
+    border: none;
+    background: url("../img/pen.png") no-repeat right #fff;
+    padding-right: 50px;
+    -webkit-appearance: none;
+    background-position: 100% 50%;
+    text-decoration: underline wavy #85FF64;
+    display: inline;
+}
+
+select:hover {
+    color: #FF04D1;
+    cursor: pointer;
+}
+
 
 /* IMG */
 img {
