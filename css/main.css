@@ -213,7 +213,20 @@ select{
     background-position: 100% 50%;
     text-decoration: underline wavy #85FF64;
     display: inline;
+    text-overflow: wrap;
 }
+
+html:hover {
+    cursor: url("../img/pen.png"), auto;	
+}
+
+#resizing_select {
+    width: 470px;
+   } 
+    
+   #width_tmp_select{
+    display : none;
+   } 
 
 select:hover {
     color: #FF04D1;

@@ -21,3 +21,11 @@ $(function() {
     });
   }); // jQuery load  
 
+
+  // Dynamically resizing select options. From here: https://stackoverflow.com/questions/20091481/auto-resizing-the-select-element-according-to-selected-options-width
+  $(document).ready(function() {
+    $('#resizing_select').change(function(){
+       $("#width_tmp_option").html($('#resizing_select option:selected').text());
+       $(this).width($("#width_tmp_select").width());  
+    });
+   });
