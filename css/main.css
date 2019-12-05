@@ -201,6 +201,12 @@ header .container {
 }
 
 
+/* CANVAS */
+#sheet {
+    border:1px solid black;
+}
+
+
 /* SELECT */
 select{
     width: auto;
