@@ -144,6 +144,17 @@ p a:hover {
     background-color: #85FF64;
 }
 
+.message p {
+    color: #FF04D1;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+.message {
+    margin: 4.768em auto 0em auto;
+}
+
 /* BLOCKQUOTES */
 blockquote {
     margin: 1.53em auto 4.768em auto;
@@ -370,6 +381,7 @@ footer p, footer a {
 
 footer a {
     padding: 0.2em 2.441em 0.2em 2.441em;
+    text-decoration: none;
 }
 
 footer a:hover {
