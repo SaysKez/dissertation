@@ -21,3 +21,103 @@ $(function() {
     });
   }); // jQuery load  
 
+  /*
+
+  // Dynamically resizing select options. From here: https://stackoverflow.com/questions/20091481/auto-resizing-the-select-element-according-to-selected-options-width
+  $(document).ready(function() {
+    $('#resizing_select').change(function(){
+       $("#width_tmp_option").html($('#resizing_select option:selected').text());
+       $(this).width($("#width_tmp_select").width());  
+    });
+   });
+*/
+
+   //CANVAS
+
+// https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
+// Easel.js https://stackoverflow.com/questions/22891827/how-do-i-hand-draw-on-canvas-with-javascript
+// full screen https://blog.codepen.io/2013/07/29/full-screen-canvas/
+
+var can = document.getElementById("sheet");
+
+/*
+function resizeCanvas() {
+  can.style.width = window.innerWidth + "px";
+  setTimeout(function() {
+    can.style.height = document.getElementById("content-height").offsetHeight + "px";
+  }, 0);
+};
+*/
+
+function resizeCanvas() {
+  can.style.width = window.innerWidth + "px";
+  setTimeout(function() {
+    can.style.height = window.innerHeight + "px";
+  }, 0);
+};
+
+// Webkit/Blink will fire this on load, but Gecko doesn't.
+window.onresize = resizeCanvas;
+
+// So we fire it manually...
+resizeCanvas();
+
+var canvas, stage;
+var drawingCanvas;
+var oldPt;
+var oldMidPt;
+var color;
+var stroke;
+var index;
+
+function init() 
+{
+  canvas = document.getElementById("sheet");
+  index = 0;
+
+  //check to see if we are running in a browser with touch support
+  stage = new createjs.Stage(canvas);
+  stage.autoClear = false;
+  stage.enableDOMEvents(true);
+
+  createjs.Touch.enable(stage);
+  createjs.Ticker.setFPS(24);
+
+  drawingCanvas = new createjs.Shape();
+
+  stage.addEventListener("stagemousedown", handleMouseDown);
+  stage.addEventListener("stagemouseup", handleMouseUp);
+
+  stage.addChild(drawingCanvas);
+  stage.update();
+}
+
+function stop() {}
+
+function handleMouseDown(event) {
+  color = "#85FF64";
+  stroke = 0.8;
+  oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
+  oldMidPt = oldPt;
+  stage.addEventListener("stagemousemove" , handleMouseMove);
+}
+
+function handleMouseMove(event) {
+  var midPt = new createjs.Point(oldPt.x + stage.mouseX>>1, oldPt.y+stage.mouseY>>1);
+
+  drawingCanvas.graphics.clear().setStrokeStyle(stroke, 'round', 'round').beginStroke(color).moveTo(midPt.x, midPt.y).curveTo(oldPt.x, oldPt.y, oldMidPt.x, oldMidPt.y);
+
+  oldPt.x = stage.mouseX;
+  oldPt.y = stage.mouseY;
+
+  oldMidPt.x = midPt.x;
+  oldMidPt.y = midPt.y;
+
+  stage.update();
+}
+
+function handleMouseUp(event) {
+  stage.removeEventListener("stagemousemove" , handleMouseMove);
+}
+
+init();
