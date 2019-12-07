@@ -32,12 +32,17 @@ $(function() {
 
 
    //CANVAS
+
+// https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
+// Easel.js https://stackoverflow.com/questions/22891827/how-do-i-hand-draw-on-canvas-with-javascript
+// full screen https://blog.codepen.io/2013/07/29/full-screen-canvas/
+
 var can = document.getElementById("sheet");
 
 function resizeCanvas() {
   can.style.width = window.innerWidth + "px";
   setTimeout(function() {
-    can.style.height = window.innerHeight + "px";
+    can.style.height = document.body.scrollHeight + "px";
   }, 0);
 };
 
