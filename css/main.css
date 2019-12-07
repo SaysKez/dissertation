@@ -569,4 +569,13 @@ ol li:hover {
     #experience {
         width: 120%;
     }
+
+    /* TOUCH DEVICES */
+    @media only screen and (hover: none) {
+
+        #sheet, .message {
+            display: none;
+        }
+
+      }
 }
