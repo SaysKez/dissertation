@@ -21,6 +21,7 @@ $(function() {
     });
   }); // jQuery load  
 
+  /*
 
   // Dynamically resizing select options. From here: https://stackoverflow.com/questions/20091481/auto-resizing-the-select-element-according-to-selected-options-width
   $(document).ready(function() {
@@ -29,7 +30,7 @@ $(function() {
        $(this).width($("#width_tmp_select").width());  
     });
    });
-
+*/
 
    //CANVAS
 
@@ -39,10 +40,19 @@ $(function() {
 
 var can = document.getElementById("sheet");
 
+/*
 function resizeCanvas() {
   can.style.width = window.innerWidth + "px";
   setTimeout(function() {
-    can.style.height = document.body.scrollHeight + "px";
+    can.style.height = document.getElementById("content-height").offsetHeight + "px";
+  }, 0);
+};
+*/
+
+function resizeCanvas() {
+  can.style.width = window.innerWidth + "px";
+  setTimeout(function() {
+    can.style.height = window.innerHeight + "px";
   }, 0);
 };
 
@@ -86,7 +96,7 @@ function stop() {}
 
 function handleMouseDown(event) {
   color = "#85FF64";
-  stroke = 1;
+  stroke = 0.8;
   oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
   oldMidPt = oldPt;
   stage.addEventListener("stagemousemove" , handleMouseMove);

@@ -129,11 +129,15 @@ ul {
 }
 a {
     text-decoration: none;
-    text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     color: black;
     line-height: 1.953em;
+}
+
+
+p a {
+    text-decoration: underline wavy #85FF64;
 }
 
 /* BLOCKQUOTES */
@@ -203,7 +207,7 @@ header .container {
 
 /* CANVAS */
 #sheet {
-    border:1px solid black;
+    /*border:1px solid black;*/
     position: fixed;
     top: 0;
     left: 0;
@@ -211,7 +215,7 @@ header .container {
 }
 
 
-/* SELECT */
+/* SELECT 
 select{
     width: auto;
     font-family: 'Bitter', serif;
@@ -226,10 +230,6 @@ select{
     text-overflow: wrap;
 }
 
-html:hover {
-    cursor: url("../img/pen.png"), auto;	
-}
-
 #resizing_select {
     width: 470px;
    } 
@@ -242,6 +242,18 @@ select:hover {
     color: #FF04D1;
     cursor: pointer;
 }
+
+*/
+
+/* CURSOR */
+html {
+    cursor: url("../img/pen-big.png") 15 30, auto;	
+}
+
+a:hover {
+    cursor: url("../img/sword.png") 15 30, auto;	
+}
+
 
 
 /* IMG */
@@ -272,6 +284,14 @@ iframe {
     border: 4px solid #85FF64;
     /* border-image: ("../img/pattern.png") 30; */
     padding: 1.53em;
+    /* So that they are clickable above canvas: */
+    position: relative;
+    z-index: 999;
+}
+
+a {
+    position: relative;
+    z-index: 999;
 }
 
 /*
@@ -370,7 +390,7 @@ body {
 #menu-wrapper {
     overflow: hidden;
     max-width: 100%;
-    cursor: pointer;
+    cursor: url("../img/sword.png") 15 30, auto;	
 }
 
 #menu-wrapper #hamburger-menu {
