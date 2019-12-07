@@ -137,7 +137,11 @@ a {
 
 
 p a {
-    text-decoration: underline wavy #85FF64;
+    text-decoration: underline wavy #FF04D1;
+}
+
+p a:hover {
+    background-color: #85FF64;
 }
 
 /* BLOCKQUOTES */
